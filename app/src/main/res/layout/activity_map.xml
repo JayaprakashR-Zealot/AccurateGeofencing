@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:hint="Please enter your place" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <fragment
+        android:id="@+id/googleMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_below="@+id/autoCompleteTextViewPlaces"
+        android:layout_above="@+id/layout_latlongLocation" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/save"
+        android:layout_above="@+id/layout_latlongLocation"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:id="@+id/imgSaveLocation" />
+
+    <LinearLayout
+        android:id="@+id/layout_latlongLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#ff058fff"
+        >
+        <TextView
+            android:id="@+id/latlongLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:textColor="#ffffffff"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
